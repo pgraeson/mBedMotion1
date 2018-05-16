@@ -1,0 +1,12 @@
+#include "mbed.h"
+#include "TMP102.h"
+ 
+TMP102 temp(p9, p10, 0x90); 
+ 
+int main()
+{
+  while(1) {
+    printf("Temperature: %f\n", temp.read());
+    wait(1.0);
+  }
+}
